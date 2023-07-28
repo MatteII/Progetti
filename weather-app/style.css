@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/*===================================[ GENERAL ]====================================*/
+
+*, 
+*::after, 
+*::before {
+box-sizing: border-box;
+}
+body {
+        font-family: 'Rubik', sans-serif;
+        background-color: hsl(185, 16%, 85%);
+        color: hsl(186, 64%, 9%);
+        width: 100%;
+        margin: 0 auto;
+}
+#body {
+        max-width: 1200px;
+        padding: 1rem;
+        margin: 0 auto;
+}
+.blurred{
+        filter: blur(3px);
+        overflow: hidden;
+}
+.divider {
+        padding: 32px 0;
+}
+.spacer {
+        margin-top: 64px;
+}
+.default-container {
+        box-shadow: 9px 8px hsl(186, 64%, 9%);
+        border: 1px solid hsl(186, 64%, 9%);
+        background-color: hsl(198, 19%, 79%);
+        border-radius: 10px;
+        padding: .7rem;
+        width: 100%;
+}
+#project-title-header {
+        background: #000;
+        background: linear-gradient();
+        background:linear-gradient(0deg, rgba(218, 119, 177, 0.3), rgba(169, 151, 248, 0.3)), url(./img/forme-di-nuvole-con-sfondo-blu.jpg);
+        background-size:cover;
+}
+#project-title {
+        width: 100%;
+        text-align: center;
+        color: hsl(186, 64%, 9%);
+        font-weight: bold;
+        font-size: 36px;
+        margin: 0;
+        padding: 64px 0;
+}
+h2.spacer {
+        width: fit-content;
+        width: -moz-fit-content;
+        text-align: left;
+        color: hsl(186, 64%, 9%);
+        font-weight: 600;
+        font-size: 24px;
+        position: relative;
+}
+h2.spacer::after {
+        content: '';
+        display: block;
+        width: 100%;
+        background: hsl(186, 64%, 9%);
+        height: 3px;
+        bottom: -5px;
+        position: absolute;
+        left: 0;
+        right: 0;
+}
+#loader {
+        display: none;
+}
+#loader.blurred {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(20, 20, 20, 0.25);
+        z-index: 100;
+        filter: blur(0) !important; 
+}
+#loader.blurred span {
+        padding: 4px 16px;
+        border-radius: 16px;
+        background-color: rgba(191, 206, 212, .2);
+}
+
+/*===================================[ HEADER ]====================================*/
+
+header {
+        display: flex;
+        align-items: center;
+}
+.header-left {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: center;
+        padding: .5rem;
+}
+.weather-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+}
+.weather-icon.large {
+        width: 80px;
+        height: 80px;
+}
+.header-current-temp {
+        font-size: 4rem;
+        margin-left: 1rem;
+}
+.header-right {
+        display: grid;
+        width: 50%;
+        justify-content: stretch;
+        gap: .7rem;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        border-left: 2px solid rgba(8, 35, 38, .15);
+        padding: .5rem;
+}
+header .info-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: hsl(199, 20%, 76%);
+        padding: .7rem;
+        border-radius: 6px;
+}
+.label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.6rem;
+        color: hsl(200, 100%, 20%);
+}
+.value-sub-info {
+        font-weight: lighter;
+        font-size: 0.6rem;
+}
+
+/*===================================[ DAY SECTION ]====================================*/
+
+.day-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 75px);
+        gap: .75rem;
+}
+.day-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(199, 20%, 76%);
+        padding: .7rem;
+        border-radius: 6px;
+}
+.day-card-date {
+        color: hsl(200, 100%, 20%);
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+        text-transform: capitalize;
+}
+
+/*===================================[ HOUR SECTION ]====================================*/
+
+.hour-section {
+        text-align: center;
+        border-spacing: 0;
+}
+.hour-row {
+        background-color: hsl(199, 20%, 76%);
+}
+.hour-row:nth-child(2n) {
+        background-color: hsl(199, 20%, 66%);
+}
+.hour-row > td {
+        padding: .25rem 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+        header {
+                flex-direction: column;
+        }
+        .header-right {
+                border-left: none;
+                padding-top: .5rem;
+                margin-top: 1rem;
+                width: 100%;
+        }
+        .header-left {
+                width: 100%;
+        }
+        .hour-section {
+                display: block;
+                max-width: -moz-fit-content;
+                max-width: fit-content;
+                margin: 0 auto;
+                overflow-x: auto;
+        }
+}
+@media only screen and (max-width: 400px) {
+        .header-right {
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(3, auto);
+        }
+}

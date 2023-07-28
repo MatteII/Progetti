@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="it">
+
+        <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="stylesheet" href="style.css">
+                <title>Weather App | MDS</title>
+                <link rel="icon" type="image/x-icon" href="icons/sun.svg">
+        </head>
+
+        <body>
+
+                <div id="loader" class="blurred">
+                        <span>
+                                <img src="img/loader_infinity.svg" alt="loader" />
+                        </span>
+                </div>
+
+                <div id="project-title-header">
+                        <h1 id="project-title" class="divider">App Meteo - MDS</h1>
+                </div>
+
+                <div id="body" class="blurred">
+                        <h2 class="spacer">In questo momento</h2>
+                        <header class="header default-container">
+                        <div class="header-left">
+                                <img src="icons/sun.svg" class="weather-icon large" alt="current-icon" data-current-icon />
+                                <div class="header-current-temp">
+                                        <span data-current-temp>00</span>&deg;
+                                </div>
+                        </div>
+                        <div class="header-right">
+                                <div class="info-group">
+                                        <div class="label">Massima</div>
+                                        <div><span data-current-high>00</span>&deg;</div>
+                                </div>
+                                <div class="info-group">
+                                        <div class="label">Massima Percepita</div>
+                                        <div><span data-current-fl-high>00</span>&deg;</div>
+                                </div>
+                                <div class="info-group">
+                                        <div class="label">Vento</div>
+                                        <div><span data-current-wind>00</span><span class="value-sub-info">kmh</span></div>
+                                </div>
+                                <div class="info-group">
+                                        <div class="label">Minima</div>
+                                        <div><span data-current-low>00</span>&deg;</div>
+                                </div>
+                                <div class="info-group">
+                                        <div class="label">Minima Percepita</div>
+                                        <div><span data-current-fl-low>00</span>&deg;</div>
+                                </div>
+                                <div class="info-group">
+                                        <div class="label">Precipitazioni</div>
+                                        <div><span data-current-precip>00</span><span class="value-sub-info">mm</span></div>
+                                </div>
+                                
+                        </div>
+                        </header>
+                
+                        <h2 class="spacer">Prossimi 7 giorni</h2>
+                        <section class="day-section default-container" data-day-section>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Lunedì</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Martedì</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Mercoledì</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Giovedì</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Venerdì</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Sabato</div>
+                                        <div>00&deg;</div>
+                                </div>
+                                <div class="day-card">
+                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date">Domenica</div>
+                                        <div>00&deg;</div>
+                                </div>
+                        </section>
+
+                        <h2 class="spacer">Prossimi 7 giorni in ore</h2>
+                        <table class="hour-section default-container">
+                                <tbody data-hour-section>
+                                        <tr class="hour-row">
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Lunedì</div>
+                                                                <div>00:00</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura Percepita</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Vento</div>
+                                                                <div>00<span class="value-sub-info">kmh</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Precipitazioni</div>
+                                                                <div><span data-precip>00</span><span class="value-sub-info">mm</span></div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                                        <tr class="hour-row">
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Lunedì</div>
+                                                                <div>00:00</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura Percepita</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Vento</div>
+                                                                <div>00<span class="value-sub-info">kmh</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Precipitazioni</div>
+                                                                <div><span data-precip>00</span><span class="value-sub-info">mm</span></div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                                        <tr class="hour-row">
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Lunedì</div>
+                                                                <div>00:00</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <img src="icons/cloud.svg" alt="day-icon" class="weather-icon" />
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura Percepita</div>
+                                                                <div>00&deg;</div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Vento</div>
+                                                                <div>00<span class="value-sub-info">kmh</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Precipitazioni</div>
+                                                                <div><span data-precip>00</span><span class="value-sub-info">mm</span></div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+
+                        <template id="day-card-template">
+                                <div class="day-card">
+                                        <img data-icon alt="day-icon" class="weather-icon" />
+                                        <div class="day-card-date" data-date></div>
+                                        <div><span data-temp></span><span>&deg;</span></div>
+                                </div>
+                        </template>
+
+                        <template id="hour-row-template">
+                                <tr class="hour-row">
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label" data-day></div>
+                                                                <div data-time></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <img data-icon alt="day-icon" class="weather-icon" />
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label" >Temperatura</div>
+                                                                <div><span data-temp></span><span>&deg;</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Temperatura Percepita</div>
+                                                                <div><span data-fl-temp></span><span>&deg;</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Vento</div>
+                                                                <div><span data-wind></span><span class="value-sub-info">kmh</span></div>
+                                                        </div>
+                                                </td>
+                                                <td>
+                                                        <div class="info-group">
+                                                                <div class="label">Precipitazioni</div>
+                                                                <div><span data-precip>3</span><span class="value-sub-info">mm</span></div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                        </template>
+                </div> <!-- Fine Div Class Body -->
+                
+                <script type="module" src="/main.js"></script>
+        </body>
+        
+</html>
