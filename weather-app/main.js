@@ -1,6 +1,6 @@
 import "./style.css"
-import { getWeather } from "./weather"
-import { ICON_MAP } from "./iconMap"
+import { getWeather } from "/Progetti/weather-app/weather"
+import { ICON_MAP } from "/Progetti/weather-app/iconMap"
 
 // ====================[ GET LOCATION, WEATHER ]======================= //
 
