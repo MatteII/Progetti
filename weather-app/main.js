@@ -43,7 +43,7 @@ function setValueHour(selector, value, { parent = document } = {}) {
 }
 
 function getIconUrl(iconCode) {
-        return `icons/${ICON_MAP.get(iconCode)}.svg`
+        return `/Progetti/weather-app/public/icons/${ICON_MAP.get(iconCode)}.svg`
 }
 
 // ====================[ CURRENT WEATHER ]======================= //
