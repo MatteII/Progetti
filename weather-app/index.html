@@ -259,6 +259,15 @@
                 </div> <!-- Fine Div Class Body -->
                 
                 <script type="module" src="/Progetti/weather-app/main.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+                <script>
+                function handleRequest() {
+                    axios.post("url", {name: "data"}).then(function (response) {
+                        console.log(response)
+                        // do whatever you want if console is [object object] then stringify the response
+                    })
+                }
+
         </body>
         
 </html>
