@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearer {
+    clear: both;
+}
+
+img {
+    border: none;
+    height: auto;
+    max-width: 100%;
+}
+
+/* focus facoltativo: rimuove l'outline quando si scorre con il mouse sopra un elemento */
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: #e6e6e6;
+    font-family: 'Rubik', sans-serif;
+    color: #111;
+}
+
+header,
+nav,
+article,
+aside,
+section,
+footer,
+main,
+figure,
+figcaption {
+    display: block;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1160px;
+}
+
+.col-1 {
+    float: left;
+    width: 8.33333%;
+}
+
+.col-2 {
+    float: left;
+    width: 16.66666%;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+}
+
+.col-4 {
+    float: left;
+    width: 33.33333%;
+}
+
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.col-8 {
+    float: left;
+    width: 66.66666%;
+}
+
+.col-10 {
+    float: left;
+    width: 83.33333%;
+}
+
+.divider {
+    padding: 20px 0;
+}
+
+.spacer {
+    padding: 70px 0;
+}
+
+.responsive,
+.responsive img {
+    height: auto;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Global Style */
+
+#header {
+    background-color: rgba(210, 210, 210, .5);
+    border-bottom: 1px solid grey;
+    box-shadow: 0 3px 20px 5px rgba(20,20,20,.2);
+}
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+}
+#header #MDS_logo {
+    height: 2em;
+}
+#header #MDS_title {
+    font-size: 1.5em;
+}
+#header #MDS_menu {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#hero {
+    height: 30vh;
+}
+#hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+}
+#hero h1 {
+    font-size: 3em;
+}
+#hero h3 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #333;
+}
+
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+#projects .col-4 {
+    display: flex;
+}
+#projects .card_outer {
+    margin: .7em;
+    padding: .7em;
+    border: 1px solid #111;
+    box-shadow: 6px 7px 0 0 #111;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+}
+#projects .card_outer img {
+    border-radius: 5px;
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+}
+#projects .card_inner {
+    padding: 0 .2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#projects h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+    font-weight: 500;
+    padding-top: .5em;
+}
+#projects p {
+    font-size: .9em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+#projects span {
+    color: #111;
+    margin-top: auto;
+    border-top: 1px solid #111;
+    padding-top: .2em;
+}
+#projects .card_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+#projects .card_link:hover {
+    background-color: rgba(0,0,0,.05);
+}
+
+#footer {
+    background-color: #111;    
+    border-top: 1px solid #fff;
+    box-shadow: 0 -3px 20px 5px rgba(20, 20, 20, .2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #e6e6e6;
+    padding: 1em;
+}
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer a {
+    color: #e6e6e6;
+}
+
+
+
+
+
+
+/* Desktop, iPad Pro */
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .container {
+        margin: 0 2%;
+        width: 96%;
+    }
+}
+
+/* Display 12", iPad Pro portrait, iPad landscape */
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        margin: 0 2%;
+        width: 96%;
+    }
+}
+
+/* Display 5.5", iPad portrait, iPhone 6, 6s, 7, 8 portrait and landscape, 5s landscape */
+
+@media only screen and (max-width: 768px) {
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-10 {
+        float: none;
+        width: 100%;
+    }
+
+    #header .container {
+        padding: 1em;
+    }
+}
+
+/* Display 4", iPhone 5s portrait */
+
+@media only screen and (max-width: 320px) {}
