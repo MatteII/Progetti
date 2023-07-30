@@ -1,6 +1,6 @@
-import "./style.css"
-import { getWeather } from "./weather"
-import { ICON_MAP } from "./iconMap"
+
+import { getWeather } from "/Progetti/weather-app/weather.js"
+import { ICON_MAP } from "/Progetti/weather-app/iconMap.js"
 
 // ====================[ GET LOCATION, WEATHER ]======================= //
 
@@ -43,7 +43,7 @@ function setValueHour(selector, value, { parent = document } = {}) {
 }
 
 function getIconUrl(iconCode) {
-        return `icons/${ICON_MAP.get(iconCode)}.svg`
+        return `/Progetti/weather-app/public/icons/${ICON_MAP.get(iconCode)}.svg`
 }
 
 // ====================[ CURRENT WEATHER ]======================= //
