@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { Vue, createApp } from 'vue'
 import '/Progetti/todolist-app/src/main.css'
 import App from '/Progetti/todolist-app/src/App.vue'
 
